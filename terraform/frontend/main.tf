@@ -20,8 +20,8 @@ provider "aws" {
 
 
 resource "aws_instance" "admin_frontend" {
-    ami = "ami-0230bd60aa48260c6"
-    instance_type = "t2.micro"
+    ami = "ami-016485166ec7fa705"
+    instance_type = "t4g.small"
     vpc_security_group_ids = [aws_security_group.main.id]
     key_name = "aws_key"
 
