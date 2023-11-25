@@ -1,6 +1,6 @@
 terraform {
   cloud {
-    organization = "gcretro"
+    organization = "moses81"
 
     workspaces {
       name = "terraform-useast1-workspace"
@@ -15,12 +15,12 @@ terraform {
 }
 
 provider "aws" {
-    region = "us-east-1"
+    region = "us-east-2"
 }
 
 
 resource "aws_instance" "admin_frontend" {
-    ami = "ami-016485166ec7fa705"
+    ami = "ami-05983a09f7dc1c18f"
     instance_type = "t4g.small"
     vpc_security_group_ids = [aws_security_group.main.id]
     key_name = "aws_key"
@@ -76,6 +76,6 @@ resource "aws_security_group" "main" {
 
 resource "aws_key_pair" "devkey" {
   key_name   = "aws_key"
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCl+y4xUjCFTdfz1Mss59twMnX9E0MVNekaaIkUN78+y06qfL3bd91T8KkzStN4uzSfdYWaGzPqVraVeryfnQdWqr6fzDC7j+V8fqeVQdx4q0spX1TuP9ieNtYTSNObk/V3OdA6/NB3T4zdrBMyECvVO0rswCTx+J7SIFngp2oT7CwEpr8DJN8PLPRrfmT3NarUMg0gvhKYeVJvYqC2ovHX9NCAl0hyndKH66zurCIMRuUHuiXA02GycNDGaPAPcotT9DI1oq3LxnyoVyoaKHXK8QxWCFlcd5fAnavPk5nBu2MlpI/ZtYoJ6njPY9R4oEXjYjo6ftqcng/6EiqQ4Qp7 sjagga@Mercys-MacBook-Air.local"
+  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC0B7G271baS7YOd+rt0yiCGuQrLld/POpGD0EOiB7FZhYZ41uMgtJdDwYn/ziL5KCrnUci8PAHZlAhZCTfRJIzSLtq7kwMZi8t9oXw+uzOSJPYozw7FeVaWZOZZe72yMKVYIEjHSVOXrAvan9OZK0l53NcuX3S/qYV8cgzBVM2WrLotVBLwD5FTfTGnE7FFJoZiZ6t3ACVTrwOIxng6iAHWAz4TSjeZT+dHwktUpeQaOWm5/KPzd8FiSpVnerqEYZReO/xoGvE49SWlQRA0iQ0hMzM/R+/l8GgU20QkqQeX2Q6I9fqGkJbiMPQhXBqvGGNgK5QpYW+zkcuZhtfdSAQfDGIe/uKVatyUL3R/Fehrj5ML/qSJX3BHKSIJRogg3UJjViRb6JXAg+1a4RAIncz1vueSbvfzfdqX4hDFahXc0HyCxel6T65xAcup/LjG+u/IEtUrvXKEK7ukzn6Qtj77Rqucb01w/6tiGcNloocopyu92I79kvN0sNVuv3t3G7TMZ8HlMGYZKHMr5zjpxLiPTDl5hBuFbBtYV/b+NeQ6BMQGF6K9WTq8UZ3n7BVGYUVXXBNfnTC2ZzHPt9NVR5hyA3nyJ+gji9CTln7s7oRnKxVkHMBqpC0yE3ygvIOV/254c1/ZcYJKedCDOxjpM2jONfhcVHtFdo1rm78ol/jiw== mchaise@Mosess-MacBook-Air.local"
 }
 
